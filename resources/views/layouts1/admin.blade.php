@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png')}}">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>@yield('title')</title>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href={{ asset('assets/admin/plugins/fontawesome-free/css/all.min.css') }}>
