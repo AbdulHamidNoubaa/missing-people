@@ -1,7 +1,8 @@
 
 
 @extends('layouts1.admin')
-
+{{-- @section('title', 'تعديل بيانات مفقود') --}}
+<title>تعديل بيانات مفقود</title>
 @section('content')
 <div class="container" dir="rtl">
 <br>

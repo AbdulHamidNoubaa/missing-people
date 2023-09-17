@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('title', ' اضافة بيانات مفقود')
 @section('content')
 <div class="container" dir="rtl">
   <br>

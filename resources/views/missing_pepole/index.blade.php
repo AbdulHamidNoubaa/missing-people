@@ -1,6 +1,5 @@
-<!-- ملف resources/views/people/index.blade.php -->
 @extends('layouts1.admin')
-
+<title>ادارة المفقودين</title>
 @section('content')
 <div class="container" dir="rtl">
     @if (session('success'))
