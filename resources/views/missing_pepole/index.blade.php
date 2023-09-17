@@ -2,11 +2,7 @@
 <title>ادارة المفقودين</title>
 @section('content')
 <div class="container" dir="rtl">
-    @if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+   
 @if (count($people) > 0)
     <table class="table table-bordered table-hover">
         <thead>
@@ -22,8 +18,8 @@
           @foreach ($people as $person)
           
             <tr>
-              <td>{{ $person->first_name }}</td>
-              <td>{{ $person->last_name }}</td>
+              <td>{{ $person->first_name_miss }}</td>
+              <td>{{ $person->last_name_miss }}</td>
               <td>{{ $person->birth_date }}</td>
               <td>
                 <a href="{{ route('missing_people.show', $person->id) }}" class="btn btn-primary btn-sm">عرض</a>

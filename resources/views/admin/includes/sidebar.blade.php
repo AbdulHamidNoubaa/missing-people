@@ -36,25 +36,23 @@
         
 
                <li class="nav-item has-treeview">
-
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <i class="nav-icon fas fa-people-carry"></i>
                   <p>
                     ادارة المفقودين  
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
-              
                 <ul class="nav nav-treeview">
-                  @if(auth()->user()->user_type == 1)
-                  {
+                 
+                  
                   <li class="nav-item">
                     <a href="{{ route('missing_people.index') }}" class="nav-link"> 
                       <i class="far fa-circle nav-icon"></i> 
                       <p>ادارة المفقودين</p>
                     </a>
-                  </li>}
-                  @endif
+                  </li>
+                
               
                   <li class="nav-item">
                     <a href="{{ route('missing_people.create') }}" class="nav-link">
@@ -62,11 +60,41 @@
                       <p>اضافة مفقود</p>
                     </a>
                   </li>
+                </ul>
+              </li>
+              @if(auth()->user()->user_type == 1)
+              {
+              <li class="nav-item has-treeview">
+
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>
+                    ادارة المستخدمين  
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              
+                <ul class="nav nav-treeview">
+                  
+                  <li class="nav-item">
+                    <a href="{{ route('users.index') }}" class="nav-link"> 
+                      <i class="fas fa-user-cog "></i> 
+                      <p>ادارة المستخدمين</p>
+                    </a>
+                  </li>}
+                 
+              
+                  <li class="nav-item">
+                    <a href="{{ route('register') }}" class="nav-link">
+                      <i class="nav-icon fas fa-user-plus"></i>
+                      <p>اضافة مستخدم</p>
+                    </a>
+                  </li>
               
                 </ul>
               
               </li>
-    
+              @endif
 
         </ul>
       </nav>

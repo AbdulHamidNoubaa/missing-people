@@ -112,8 +112,9 @@ if ($request->hasFile('image')) {
   $image = $request->file('image');
   $imageName = time() . '.' . $image->getClientOriginalExtension();
   $image->move(public_path('images'), $imageName);
+  $missingPerson->image = $imageName;
 }
-$missingPerson->image = $imageName;
+
 
     $missingPerson->save();
     return redirect()->route('missing_people.create')->with('success', 'تمت إضافة البيانات بنجاح.');

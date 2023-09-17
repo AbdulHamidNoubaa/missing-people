@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Missing_peopleController;
+use App\Http\Controllers\usersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,11 +24,12 @@ Route::get('/missing_people/create', [Missing_peopleController::class, 'create']
 
 Auth::routes();
 
-
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
     Route::get('/missing_people', [Missing_peopleController::class, 'index'])->name('missing_people.index')->middleware('auth');
     Route::post('/missing_people', [Missing_peopleController::class, 'store'])->name('missing_people.store');
     Route::get('/missing_people/{id}', [Missing_peopleController::class, 'show'])->name('missing_people.show')->middleware('auth');
     Route::get('/missing_people/{id}/edit', [Missing_peopleController::class, 'edit'])->name('missing_people.edit')->middleware('auth');
     Route::get('missing_people/delete/{id}', [Missing_peopleController::class,'delete'])->name('missing_people.delete')->middleware('auth');
+    Route::resource('users',usersController::class);
+    Route::get('users/delete/{id}', [usersController::class,'delete'])->name('users.delete')->middleware('auth');
 
